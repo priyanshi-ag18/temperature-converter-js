@@ -1,0 +1,17 @@
+.main{
+    background-color: aquamarine;
+    padding: 50px;
+    width: fit-content;
+    border-radius: 5px;
+    border: 2px solid;
+    font-size: larger;
+    margin-left: 25%;
+    margin-top: 6%;
+}
+
+button{
+    background-color: beige;
+    color: darkcyan;
+    border: none;
+    box-shadow: 2px 2px ;
+}

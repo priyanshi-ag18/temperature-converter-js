@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="main">
+    <h1 class="heading-1">Temperature Converter</h1>
+      <p class="tempF">
+        <label for="">Farenheit:</label>
+        <input type="number" name="" id="farenTemp" placeholder="Farenheit">
+        <button onclick="tempFtoC(document.getElementById('farenTemp').value)">Calculate</button>
+        <p><h2>Output: <span id="resultF"></span></h2></p>
+      </p>
+      <p class="tempF">
+        <label for="">Celcius:</label>
+        <input type="number" name="" id="CelciusTemp" placeholder="Farenheit">
+        <button onclick="tempCtoF(document.getElementById('CelciusTemp').value)">Calculate</button>
+        <p><h2>Output: <span id="resultC"></span></h2></p>
+      </p>
+   </div>
+  <script>
+    function tempCtoF(temp){
+          let newTemp=(temp-32)*(5/9);
+          document.getElementById("resultC").innerHTML=Math.round((newTemp + Number.EPSILON) * 100) / 100+'&#8457';
+    }
+    function tempFtoC(temp1){
+          let newTemp=((temp1*9)/5)+32;
+          
+          document.getElementById("resultF").innerHTML=Math.round((newTemp + Number.EPSILON) * 100) / 100+'&#8451;';
+    }
+  </script>
+</body>
+</html>
